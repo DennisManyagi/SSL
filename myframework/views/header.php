@@ -7,15 +7,10 @@
 
 
 
-    echo"<a href='".$link."'>".strtoupper($key)."</a>| ";
+    echo "<a href='".$link."'>".strtoupper($key)."</a> | ";
 }
 
 
 ?>
-
-
-
-
-
 <h1>Header</h1>
 

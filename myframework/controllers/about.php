@@ -1,6 +1,6 @@
 <?php
 
-class welcome extends AppController{
+class about extends AppController{
 
 
     
