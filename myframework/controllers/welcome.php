@@ -4,7 +4,7 @@ class welcome extends AppController{
 
 
     
-    public function _construct($parent){
+    public function __construct($parent){
 
 
         $this->parent=$parent;
@@ -19,7 +19,7 @@ public function hello(){
 
 
 
-        echo"hello world yes";
+        echo"hello world yes!";
 
     //$data = array("pagename"=>"about");
 
