@@ -19,16 +19,16 @@ public function index(){
 
 
 
-        echo"hello world yes!";
+        //echo"hello world yes!";
 
     //$data = array("pagename"=>"about");
 
     $data = array();
     $data["pagename"] = "about";
-    $data["navigation"] = array("home"=>"/home", "about"=>"/about");
+    $data["navigation"] = array("home"=>"/welcome", "about"=>"/about");
 
     $this->parent->getView("header", $data);
-    $this->parent->getView("body");
+    $this->parent->getView("welcome");
     $this->parent->getView("footer");
 }
 
