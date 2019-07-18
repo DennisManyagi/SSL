@@ -1,6 +1,6 @@
 <?php
 
-class welcome extends AppController{
+class photos extends AppController{
 
 
     
@@ -28,7 +28,7 @@ public function index(){
     $data["navigation"] = array("home"=>"/welcome", "about"=>"/about", "photos"=>"/photos");
 
     $this->parent->getView("header", $data);
-    $this->parent->getView("welcome");
+    $this->parent->getView("photos");
     $this->parent->getView("footer");
 }
 

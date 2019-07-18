@@ -3,7 +3,7 @@
 <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">About
+    <h1 class="mt-4 mb-3">Photos
         <small>Subheading</small>
     </h1>
 
@@ -13,28 +13,6 @@
         </li>
         <li class="breadcrumb-item active">About</li>
     </ol>
-
-    <!-- Progress Bar -->
-    <h2>Progress</h2>
-
-    <div class="progress">
-        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
-    </div>
-
-    <!-- Intro Content -->
-    <div class="row">
-        <div class="col-lg-6">
-            <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
-        </div>
-        <div class="col-lg-6">
-            <h2>About Modern Business</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
-        </div>
-    </div>
-    <!-- /.row -->
-
 
 
 
@@ -49,7 +27,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>You are reading this modal in the About page</p>
+                    <p>You are reading this text in the photo modal!</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -61,7 +39,7 @@
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-        Launch About Modal
+        Launch Photo Modal
     </button>
 
 
@@ -93,13 +71,17 @@
         </a>
     </div>
 
+    <!-- Progress Bar -->
+    <h2>Progress</h2>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+    </div>
 
     <!-- Pop Over -->
 
     <h2>Pop Over</h2>
     <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
-
-</div>
 
 </div>
 <!-- /.container -->

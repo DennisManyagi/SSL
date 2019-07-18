@@ -10,11 +10,20 @@
 
     <title>Modern Business - Start Bootstrap Template</title>
 
+<!--POP OVER REQUIRED SCRIPT -->
+    <script src="https://v4-alpha.getbootstrap.com/assets/js/vendor/tether.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link href="assets/modern-business.css" rel="stylesheet">
+
+    <script>
+        $(document).(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
 
 </head>
 
@@ -34,10 +43,23 @@
 
                 <?//var_dump($data["navigation"]);
 
+                $index = "myButtons";
+
+                $menuLinkid = basename($_SERVER['PHP_SELF'],"php");
+
+                if($menuLinkid == "about") {
+
+                    $index = 'myActiveButton';
+
+                }elseif ($menuLinkid == "photos"){
+
+                    $index = 'mySecondButton';
+                }
+
                 foreach($data["navigation"] as $key=>$link){?>
 
-                    <li class="nav-item active">
-                    <a class="nav-link" href="<?=$link?>"><?=strtoupper($key)?></a>
+                    <li class="">
+                    <a class="<?=$index?>" href="<?=$link?>"><?=strtoupper($key)?></a>
                 </li>
 
                 <?

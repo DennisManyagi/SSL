@@ -25,7 +25,7 @@ public function index(){
 
     $data = array();
     $data["pagename"] = "about";
-    $data["navigation"] = array("home"=>"/welcome", "about"=>"/about");
+    $data["navigation"] = array("home"=>"/welcome", "about"=>"/about", "photos"=>"/photos");
 
     $this->parent->getView("header", $data);
     $this->parent->getView("about");

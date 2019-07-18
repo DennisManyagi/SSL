@@ -20,3 +20,20 @@ body {
 .portfolio-item {
   margin-bottom: 30px;
 }
+
+.myButtons{
+
+  color: red;
+
+}
+
+.myActiveButton{
+
+  color: green;
+
+}
+
+.mySecondButton{
+
+  color: white;
+}
