@@ -40,7 +40,7 @@ public function registerConfirmed(){
 
     $data = array();
     $data["pagename"] = "about";
-    $data["navigation"] = array("home"=>"/welcome", "about"=>"/about", "photos"=>"/photos", "register"=>"/register");
+    $data["navigation"] = array("home"=>"/welcome", "about"=>"/about", "photos"=>"/photos", "register"=>"/register", "login"=>"/login");
 
     $this->parent->getView("header", $data);
     $this->parent->getView("registerConfirmed");
