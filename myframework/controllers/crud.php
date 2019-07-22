@@ -1,6 +1,6 @@
 <?php
 
-class welcome extends AppController{
+class crud extends AppController{
 
 
     
@@ -10,6 +10,14 @@ class welcome extends AppController{
         $this->parent=$parent;
 
         //var_dump($this->parent);
+
+        //cannot see page unless logged in
+        if(!@$_SESSION["isloggedin"] || @$_SESSION["isloggedin"] != "1"){
+
+            header("location:/login?msg=Not Allowed");
+
+
+        }
 
 
 }
@@ -24,7 +32,7 @@ public function index(){
     //$data = array("pagename"=>"about");
 
     $data = array();
-    $data["pagename"] = "welcome";
+    $data["pagename"] = "crud";
     $data["navigation"] = array("home"=>"/welcome", "about"=>"/about", "photos"=>"/photos", "register"=>"/register", "login"=>"/login");
 
     $this->parent->getView("header", $data);

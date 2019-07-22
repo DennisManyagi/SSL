@@ -1,11 +1,16 @@
 <?php
 
-class welcome extends AppController{
+class logout extends AppController{
 
 
     
     public function __construct($parent){
 
+
+        $_SESSION["isloggedin"] = "0";
+        session_destroy();
+
+        header("location:login");
 
         $this->parent=$parent;
 
@@ -24,7 +29,7 @@ public function index(){
     //$data = array("pagename"=>"about");
 
     $data = array();
-    $data["pagename"] = "welcome";
+    $data["pagename"] = "about";
     $data["navigation"] = array("home"=>"/welcome", "about"=>"/about", "photos"=>"/photos", "register"=>"/register", "login"=>"/login");
 
     $this->parent->getView("header", $data);

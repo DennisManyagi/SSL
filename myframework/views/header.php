@@ -88,12 +88,19 @@
                     $index = 'mySecondButton';
                 }
 
-                foreach($data["navigation"] as $key=>$link){?>
 
-                    <li class="">
+                foreach($data["navigation"] as $key=>$link){?>
+                    <li class="nav-item active">
+                    <?if($key == "login" && @$_SESSION["isloggedin"] && @$_SESSION["isloggedin"] ==1){?>
+
+                        <a class="nav-link" href="/crud" style="<?=xs$this->urlPathParts[0] == "crud"?"color:orange":""?>">CRUD</a>
+                        <li>
+                        <li class="nav-item active"><a class="nav-link" href="/logout">LOGOUT</a>
+                    <?}else{?>
+
                     <a class="<?=$index?>" href="<?=$link?>"><?=strtoupper($key)?></a>
                 </li>
-
+<?}?>
                 <?
                 }
                 ?>
