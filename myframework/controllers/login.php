@@ -34,6 +34,10 @@ public function index(){
 
 
 
+
+
+
+
 public function recv(){
 
         if($_POST["type"] == "form"){
@@ -85,6 +89,7 @@ public function recvAjax(){
     }
 
 }
+
 
 }
 

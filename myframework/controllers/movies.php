@@ -1,23 +1,27 @@
 <?php
 
-class logout extends AppController{
+class movies extends AppController{
 
 
     
     public function __construct($parent){
 
 
-        $_SESSION["isloggedin"] = "0";
-        session_destroy();
-
-        header("location:login");
-
         $this->parent=$parent;
 
         //var_dump($this->parent);
 
+        //cannot see page unless logged in
+        if(!@$_SESSION["isloggedin"] || @$_SESSION["isloggedin"] != "1"){
+
+            header("location:/login?msg=Not Allowed");
+
+
+        }
+
 
 }
+
 
 
 public function index(){
@@ -29,7 +33,7 @@ public function index(){
     //$data = array("pagename"=>"about");
 
     $data = array();
-    $data["pagename"] = "logout";
+    $data["pagename"] = "movies";
     $data["navigation"] = array("home"=>"/welcome", "about"=>"/about", "photos"=>"/photos", "register"=>"/register", "login"=>"/login");
 
     $this->parent->getView("header", $data);

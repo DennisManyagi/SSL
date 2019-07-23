@@ -93,8 +93,12 @@
                     <li class="nav-item active">
                     <?if($key == "login" && @$_SESSION["isloggedin"] && @$_SESSION["isloggedin"] ==1){?>
 
-                        <a class="nav-link" href="/crud" style="<?=xs$this->urlPathParts[0] == "crud"?"color:orange":""?>">CRUD</a>
-                        <li>
+                        <a class="nav-link" href="/crud" style="<?=$this->urlPathParts[0] == "crud"?"color:orange":""?>">CRUD</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/movies" style="<?=$this->urlPathParts[0] == "movies"?"color:orange":""?>">MOVIES</a>
+                        </li>
                         <li class="nav-item active"><a class="nav-link" href="/logout">LOGOUT</a>
                     <?}else{?>
 
