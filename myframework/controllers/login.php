@@ -60,12 +60,13 @@ public function recvForm(){
             $_SESSION["isloggedin"] = "1";
             $_SESSION["useremail"] = $_POST["email"];
             //header("location:/login?msg=Good login");
+            header("location:/profile");
 
         }else{
 
             $_SESSION["isloggedin"] = "0";
             $_SESSION["useremail"] = "";
-            //header("location:/login?msg=Invalid User");
+            header("location:/login?msg=Invalid User");
 
         }
 

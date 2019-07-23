@@ -34,7 +34,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">ERROR</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Update</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -98,6 +98,9 @@
 
                         <li class="nav-item active">
                             <a class="nav-link" href="/movies" style="<?=$this->urlPathParts[0] == "movies"?"color:orange":""?>">MOVIES</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/profile" style="<?=$this->urlPathParts[0] == "profile"?"color:orange":""?>">PROFILE</a>
                         </li>
                         <li class="nav-item active"><a class="nav-link" href="/logout">LOGOUT</a>
                     <?}else{?>

@@ -15,13 +15,9 @@
     </ol>
 
     <!-- Intro Content -->
-    <!-- Intro Content -->
     <div class="row">
         <h1>FORM REQUEST</h1>
     </div>
-
-
-
 
     <div class="row">
         <div class="col-lg-12">
