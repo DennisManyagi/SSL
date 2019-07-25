@@ -56,11 +56,10 @@ public function recvForm(){
         if($_POST["email"] == "mike@aol.com" && $_POST["password"] == "1234"){
 
 
-
             $_SESSION["isloggedin"] = "1";
             $_SESSION["useremail"] = $_POST["email"];
             //header("location:/login?msg=Good login");
-            header("location:/profile");
+            header("location:/movies");
 
         }else{
 

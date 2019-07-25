@@ -37,7 +37,7 @@ public function index(){
     $data["navigation"] = array("home"=>"/welcome", "about"=>"/about", "photos"=>"/photos", "register"=>"/register", "login"=>"/login");
 
     $this->parent->getView("header", $data);
-    $this->parent->getView("welcome");
+    $this->parent->getView("film");
     $this->parent->getView("footer");
 }
 
