@@ -53,7 +53,19 @@ public function recv(){
 
 public function recvForm(){
 
-        if($_POST["email"] == "mike@aol.com" && $_POST["password"] == "1234"){
+
+    /*$myfile = fopen("user.txt", "r") or die("Unable to open file!");
+    // Output one character until end-of-file
+    while (!feof($myfile)) {
+        echo fgetc($myfile);
+    }
+    fclose($myfile);
+
+    //save data in a session and display inside view
+    $_SESSION["data"] = $myfile;*/
+
+
+    if($_POST["email"] == "mike@aol.com" && $_POST["password"] == "1234"){
 
 
             $_SESSION["isloggedin"] = "1";

@@ -17,7 +17,14 @@ class movies extends AppController{
             header("location:/login?msg=Not Allowed");
 
 
+            //display saved data in file
+        }else if(@$_SESSION["data"]){
+
+            echo $_SESSION["data"];
+
+
         }
+
 
 
 }

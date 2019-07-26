@@ -56,7 +56,7 @@ public function index(){
 
         var_dump($_POST["usercatpcha"]);
 
-        if(!@$_POST["usercatpcha"] || $_POST["usercatpcha"]!= ""){
+        if(!@$_POST["usercatpcha"] || $_POST["usercatpcha"]!= $_SESSION["image"]){
             array_push($err,"Captcha Incorrect");
         }
 

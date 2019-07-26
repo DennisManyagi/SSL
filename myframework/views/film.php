@@ -22,11 +22,14 @@
             <h2>About Modern Business</h2>
             <?php
             $myfile = fopen("user.txt", "r") or die("Unable to open file!");
-            // Output one character until end-of-file
-            while(!feof($myfile)) {
-                echo fgetc($myfile);
-            }
-            fclose($myfile);
+    // Output one character until end-of-file
+    while (!feof($myfile)) {
+        echo fgetc($myfile);
+    }
+    fclose($myfile);
+
+    //save data in a session and display inside view
+    $_SESSION["data"] = $myfile;
             ?>
         </div>
     </div>

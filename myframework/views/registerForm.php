@@ -65,7 +65,7 @@
 
 
 
-                $_SESSION["data"]= "";
+                $_SESSION["image"]= $image;
 
 
 
