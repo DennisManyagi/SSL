@@ -67,8 +67,10 @@ public function index(){
 
         $_REQUEST["name"];
 
-        $sql = "insert into users (name) values (:name)";
-        $data["users"] = $this->parent->getModel("users")->insert($sql, array(":email"=>$_REQUEST["name"]));
+        $sql = "insert into users (email) values (:name)";
+
+
+        $data["users"] = $this->parent->getModel("users")->insert($sql, array(":name"=>$_REQUEST["name"]));
         //var_dump($this->parent->getModel("fruit")->select($sql));
 
         header("location:/profile");
