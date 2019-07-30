@@ -28,8 +28,8 @@
             foreach($data["fruit"] as $fruit){
 
                 echo "<li>".$fruit["name"];
-                echo " <a href='/crud/delete/".$fruit["id"]."'>Delete</a>";
-                echo "| <a href='/crud/updateForm'>Update</a></li>";
+                echo " <a href='/crud/deleteAction/".$fruit["id"]."'>Delete</a>";
+                echo "| <a href='/crud/updateAction/".$fruit["id"]."'>Update</a></li>";
 
             };
 

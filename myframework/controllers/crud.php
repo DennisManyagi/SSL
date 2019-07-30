@@ -76,6 +76,36 @@ $sql = "insert into fruit_table (name) values (:name)";
 }
 
 
+    public function deleteAction(){
+
+        //$_REQUEST["name"];
+
+        $sql = "delete from fruit_table where id = (:name)";
+
+
+        $data["users"] = $this->parent->getModel("users")->delete($sql, array(":name"=>$_REQUEST["name"]));
+        //var_dump($this->parent->getModel("fruit")->select($sql));
+
+        header("location:/profile");
+
+    }
+
+    public function updateAction(){
+
+        $_REQUEST["name"];
+
+        $sql = "update fruit_table set (name) values (:name) where id = (:id)";
+
+
+        $data["users"] = $this->parent->getModel("users")->update($sql, array(":name"=>$_REQUEST["name"]));
+        //var_dump($this->parent->getModel("fruit")->select($sql));
+
+        header("location:/profile");
+
+    }
+
+
+
 }
 
 

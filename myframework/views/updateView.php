@@ -11,7 +11,7 @@
         <li class="breadcrumb-item">
             <a href="/profile/addUser">Add New User</a>
         </li>
-        <li class="breadcrumb-item active">About</li>
+        <li class="breadcrumb-item active">Update View</li>
     </ol>
 
     <!-- Intro Content -->
@@ -20,22 +20,25 @@
             <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
         </div>
         <div class="col-lg-6">
-            <h2>About Modern Business</h2>
-            <ul>
-            <?php
+            <h2>User view</h2>
+            <form action="/profile/updateAction" method="post">
+                <?php
 
 
-            foreach($data["users"] as $user){
+                foreach($data["users"] as $user){
 
-                echo "<li>".$user["email"];
-                echo " <a href='/profile/deleteAction/".$user["id"]."'>Delete</a>";
-                echo "| <a href='/profile/updateAction/".$user["id"]."'>Update</a></li>";
 
-            };
+                    echo "<input>".$user["email"]."</input>";
+                    echo "| <a href='/profile/updateAction/".$user["id"]."'>Update</a></li>";
 
-            ?>
+                };
 
-            </ul>
+                ?>
+
+                <input type="submit" name="">
+
+
+            </form>
 
         </div>
     </div>

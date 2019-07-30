@@ -34,7 +34,7 @@ public function index(){
     $data["navigation"] = $this->parent->getNav();
 
     $sql = "select * from users";
-    $data["users"] = $this->parent->getModel("fruit")->select($sql);
+    $data["users"] = $this->parent->getModel("users")->select($sql);
     //var_dump($this->parent->getModel("fruit")->select($sql));
 
 
@@ -74,6 +74,45 @@ public function index(){
         //var_dump($this->parent->getModel("fruit")->select($sql));
 
         header("location:/profile");
+
+    }
+
+    public function deleteAction(){
+
+        //$_REQUEST["name"];
+
+        $sql = "delete from users where id = (:name)";
+
+
+        $data["users"] = $this->parent->getModel("users")->delete($sql, array(":name"=>$_REQUEST["name"]));
+        //var_dump($this->parent->getModel("fruit")->select($sql));
+
+        header("location:/profile");
+
+    }
+
+    public function updateAction(){
+
+
+        $data = array();
+        $data["pagename"] = "updateView";
+        $data["navigation"] = $this->parent->getNav();
+
+
+        $this->parent->getView("header", $data);
+        $this->parent->getView("updateView", $data);
+        $this->parent->getView("footer");
+
+
+        $_REQUEST["name"];
+
+        $sql = "insert into users (email) values (:name)";
+
+
+        $data["users"] = $this->parent->getModel("users")->update($sql, array(":name"=>$_REQUEST["name"]));
+        //var_dump($this->parent->getModel("fruit")->select($sql));
+
+
 
     }
 
