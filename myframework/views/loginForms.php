@@ -21,7 +21,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <form method="post" action="/login/recv">
+            <form method="post" action="/login/login">
                 <input type="hidden" name="type" value="form">
                 <div class="form-group input-group">
                     <div class="input-group-prepend">

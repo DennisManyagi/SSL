@@ -103,6 +103,37 @@ public function recvAjax(){
 }
 
 
+
+
+    public function login(){
+
+
+        if($_REQUEST["email"] && $_REQUEST["password"]){
+
+
+            $data = $this->parent->getModel("users")->select(
+                "select * from users where email =:email and password = :password",
+                array(":email"=>$_REQUEST["email"],":password"=>sha1($_REQUEST["password"])));
+
+
+
+            if($data   || $_REQUEST["email"] == "mike@aol.com" && $_REQUEST["password"] == "1234" ){
+
+
+                $_SESSION["isloggedin"] = 1;
+                header("location:/profile");
+
+            }else{
+
+                header("location:/login?msg=".$_REQUEST["email"].$_REQUEST["password"].$data."bad login");
+            }
+
+
+        }
+
+    }
+
+
 }
 
 

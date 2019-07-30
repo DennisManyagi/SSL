@@ -1,6 +1,6 @@
 <?php
 
-class crud extends AppController{
+class auth extends AppController{
 
 
     
@@ -45,33 +45,30 @@ public function index(){
     $this->parent->getView("footer");
 }
 
-public function addForm(){
 
 
-    //echo"hello world yes!";
-
-    //$data = array("pagename"=>"about");
-
-    $data = array();
-    $data["pagename"] = "crud";
-    $data["navigation"] = $this->parent->getNav();
+public function login(){
 
 
-    $this->parent->getView("header", $data);
-    $this->parent->getView("addForm", $data);
-    $this->parent->getView("footer");
+        if($_REQUEST["username"] && $_REQUEST["password"]){
 
-}
 
-public function addAction(){
+            $data = $this->parent->getModel("users")->select(
+                "select * from users where email =:email and password = :password",
+                array(":email"=>$_REQUEST["username"],":password"=>sha1($_REQUEST["password"])));
 
-$_REQUEST["name"];
+                if($data){
 
-$sql = "insert into fruit_table (name) values (:name)";
-    $data["fruit"] = $this->parent->getModel("fruit")->insert($sql, array(":name"=>$_REQUEST["name"]));
-    //var_dump($this->parent->getModel("fruit")->select($sql));
 
-    header("location:/crud");
+                    $_SESSION["isloggedin"] = 1;
+                    header("location:/profile");
+                }else{
+
+                    header("location:/welcome?msg= bad login");
+                }
+
+
+        }
 
 }
 

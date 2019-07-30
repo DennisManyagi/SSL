@@ -28,22 +28,57 @@ public function index(){
 
 
 
-        //echo"hello world yes!";
-
-    //$data = array("pagename"=>"about");
 
     $data = array();
     $data["pagename"] = "profile";
-    $data["navigation"] = array("home"=>"/welcome", "about"=>"/about", "photos"=>"/photos", "register"=>"/register", "login"=>"/login");
+    $data["navigation"] = $this->parent->getNav();
+
+    $sql = "select * from users";
+    $data["users"] = $this->parent->getModel("fruit")->select($sql);
+    //var_dump($this->parent->getModel("fruit")->select($sql));
+
 
     $this->parent->getView("header", $data);
     $this->parent->getView("profile");
+    $this->parent->getView("users", $data);
     $this->parent->getView("footer");
 }
 
+    public function addUser(){
 
 
-public function updatePicture(){
+        //echo"hello world yes!";
+
+        //$data = array("pagename"=>"about");
+
+        $data = array();
+        $data["pagename"] = "addUser";
+        $data["navigation"] = $this->parent->getNav();
+
+
+        $this->parent->getView("header", $data);
+        $this->parent->getView("addUser", $data);
+        $this->parent->getView("footer");
+
+    }
+
+
+    public function addAction(){
+
+        $_REQUEST["name"];
+
+        $sql = "insert into users (name) values (:name)";
+        $data["users"] = $this->parent->getModel("users")->insert($sql, array(":email"=>$_REQUEST["name"]));
+        //var_dump($this->parent->getModel("fruit")->select($sql));
+
+        header("location:/profile");
+
+    }
+
+
+
+
+    public function updatePicture(){
 
 
        if($_FILES["myfile"]["type"] == "image/jpg" || $_FILES["myfile"]["type"] == "image/jpeg"){
