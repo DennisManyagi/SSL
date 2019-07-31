@@ -72,6 +72,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
 
+                <li><a href="/api/showApi">API</a></li>
 
                 <?//var_dump($data["navigation"]);
 
